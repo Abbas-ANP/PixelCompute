@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#parent-container {
+    border: solid 1px grey;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 80px;
+    padding: 5vh 20vh;
+    padding-bottom: 2vh;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+#blocks-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 20px;
+    padding: 14px;
+}
+
+.wordle-block {
+    border: solid 2px rgb(146, 146, 146);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.correct-word {
+    color: white;
+    background-color: green;
+}
+
+.misplaced-word {
+    color: black;
+    background-color: yellow;
+}
+
+.wrong-word {
+    color: white;
+    background-color: gray;
+}
+
+#input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#input-section {
+    padding: 10px;
+    height: 20px;
+    width: 200px;
+    outline: none;
+    border: solid 2px grey;
+}
+
+#submit-button {
+    padding: 10px;
+    height: 45px;
+    width: 150px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    border: solid 2px grey;
+}
+
+#display-result-section {
+    font-weight: bold;
+    margin-top: 28px;
+}

@@ -78,9 +78,17 @@ h1 {
 #add-button {
     font-size: x-large;
     border: none;
-    background-color: #fefec0;
+    background-color: #11ff00;
     position: absolute;
     border-radius: 5px;
-    top: 116px;
-    left: 491px;
+    top: 112px;
+    left: 488px;
+}
+
+#add-button:hover {
+    transform: scale(1.1);
+}
+
+button {
+    cursor: pointer;
 }
