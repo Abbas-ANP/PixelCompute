@@ -53,7 +53,7 @@ const addSticky = () => {
 	}
 	
 	let deleteButton = document.createElement("button");
-  deleteButton.id = "delete-button";
+  deleteButton.classList.add("delete-button");
   deleteButton.innerText = "X";
   sticky.append(deleteButton);
 

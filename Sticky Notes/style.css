@@ -42,7 +42,7 @@ h1 {
     overflow-y: scroll;
 }
 
-#delete-button {
+.delete-button {
     border: none;
     color: #ffff;
     background-color: #e54b3a;
