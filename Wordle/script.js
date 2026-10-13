@@ -682,8 +682,9 @@ const handleSubmit = () => {
   let word = inputSection.value.trim().toLowerCase();
   inputSection.value = "".trim();
 
-  if (word.length !== 5) {
-    displaySection.innerText = "The word must be of length 5!";
+  if (!/^[a-zA-Z]{5}$/.test(word)) {
+    displaySection.innerText =
+      "Only 5 letter alphabets are allowed!";
 
     setTimeout(() => {
       displaySection.innerHTML = "<br>";
