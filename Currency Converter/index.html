@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="parent-container">
+      <h1>Currency Converter</h1>
+
+      <div id="input-container">
+        <p>Enter amount</p>
+        <input id="input-section" placeholder="100" required />
+      </div>
+
+      <div id="dropdown-container">
+        <select name="from-country" id="from-country" class="dropdown">
+          <option value="Select">Select</option>
+        </select>
+        <span>TO</span>
+        <select name="to-country" id="to-country" class="dropdown">
+          <option value="Select">Select</option>
+        </select>
+      </div>
+      <button id="submit-button" class="disabled">Convert</button>
+      <div id="display-container">
+        <p id="display-result"></p>
+        <p id="display-error"></p>
+        <p id="place-holder"></p>
+      </div>
+    </div>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
