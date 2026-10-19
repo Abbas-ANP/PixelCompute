@@ -124,19 +124,8 @@ const handleTasks = () => {
   dueTasks.length = 0;
   upcomingTasks.length = 0;
 
-  if (tasks.length !== 0) {
-    dueTasksSection.innerHTML = `
-    <div id="due-tasks-section">
-      <h3 class="tasks-section-header">Due Tasks</h3>
-    </div>
-  `;
-
-    upcomingTasksSection.innerHTML = `
-    <div id="upcoming-tasks-section">
-      <h3 class="tasks-section-header">Upcoming Tasks</h3>
-    </div>
-  `;
-  }
+  dueTasksSection.innerHTML = "";
+  upcomingTasksSection.innerHTML = "";
 
   tasks.forEach((task) => {
     const { date } = task;
@@ -158,8 +147,17 @@ const handleTasks = () => {
     }
   });
 
-  displayTasks(dueTasks, dueTasksSection);
-  displayTasks(upcomingTasks, upcomingTasksSection);
+  if (dueTasks.length > 0) {
+    dueTasksSection.innerHTML =
+      '<h3 class="tasks-section-header">Due Tasks</h3>';
+    displayTasks(dueTasks, dueTasksSection);
+  }
+
+  if (upcomingTasks.length > 0) {
+    upcomingTasksSection.innerHTML =
+      '<h3 class="tasks-section-header">Upcoming Tasks</h3>';
+    displayTasks(upcomingTasks, upcomingTasksSection);
+  }
 };
 
 const handleTaskSubmission = () => {
@@ -376,5 +374,4 @@ searchResultsDialogCloseButton.addEventListener("click", () => {
   }, 100);
 });
 
-localStorage.clear();
 document.addEventListener("DOMContentLoaded", initialize);

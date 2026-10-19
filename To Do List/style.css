@@ -46,7 +46,7 @@ body {
 #search-results-dialog {
     position: absolute;
     top: 150px;
-    left: -322px;
+    left: -290px;
     min-width: 66vh;
     height: 40vh;
     overflow-y: auto;
