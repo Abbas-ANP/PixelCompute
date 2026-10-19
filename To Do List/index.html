@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div id="search-results-container">
+        <dialog id="search-results-dialog">
+          <div>
+            <button id="search-results-dialog-close-button">Close</button>
+          </div>
+          <div id="search-results-list"></div>
+        </dialog>
+      </div>
+    <div id="parent-container">
+      <div id="header-container">
+        <h1>To-Do List</h1>
+        <input
+          type="text"
+          id="task-search-section"
+          placeholder="Search tasks..."
+        />
+      </div>
+      
+      <div id="input-container">
+        <input
+          type="text"
+          id="task-input-section"
+          placeholder="Add your task here"
+        />
+        <input type="datetime-local" name="" id="task-time-section" />
+        <button id="task-add-button">Add Task</button>
+      </div>
+      <div id="tasks-container">
+        <div id="due-tasks-section">
+        </div>
+
+        <div id="upcoming-tasks-section">
+        </div>
+      </div>
+
+      <dialog id="dialog">
+        <p id="dialog-message"></p>
+        <button id="dialog-close-button">&#x2715</button>
+        <button id="dialog-ok-button">OK</button>
+      </dialog>
+
+      <dialog id="edit-dialog">
+        <input type="text" id="edit-input-section">
+        <input type="datetime-local" id="edit-time-section">
+        <button id="edit-update-button">Update</button>
+        <button id="edit-close-button">&#x2715</button>
+      </dialog>
+    
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
